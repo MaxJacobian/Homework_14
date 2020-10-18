@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		50AAEE2F253BCD6C0091D20C /* HW_14.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50AAEE2D253BCD6C0091D20C /* HW_14.xcdatamodeld */; };
 		50AAEE31253BCD700091D20C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AAEE30253BCD700091D20C /* Assets.xcassets */; };
 		50AAEE34253BCD700091D20C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AAEE32253BCD700091D20C /* LaunchScreen.storyboard */; };
+		50AAEE46253BD26A0091D20C /* UsersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AAEE45253BD26A0091D20C /* UsersData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		50AAEE30253BCD700091D20C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50AAEE33253BCD700091D20C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50AAEE35253BCD700091D20C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50AAEE45253BD26A0091D20C /* UsersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersData.swift; sourceTree = "<group>"; };
 		C63D89C19743AC25827F3788 /* Pods_HW_14.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HW_14.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E2AAC5E91D009B272CFACA /* Pods-HW_14.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW_14.debug.xcconfig"; path = "Target Support Files/Pods-HW_14/Pods-HW_14.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 				50AAEE24253BCD6C0091D20C /* AppDelegate.swift */,
 				50AAEE26253BCD6C0091D20C /* SceneDelegate.swift */,
 				50AAEE28253BCD6C0091D20C /* ViewController.swift */,
+				50AAEE45253BD26A0091D20C /* UsersData.swift */,
 				50AAEE2A253BCD6C0091D20C /* Main.storyboard */,
 				50AAEE30253BCD700091D20C /* Assets.xcassets */,
 				50AAEE32253BCD700091D20C /* LaunchScreen.storyboard */,
@@ -91,7 +94,6 @@
 				D5E2AAC5E91D009B272CFACA /* Pods-HW_14.debug.xcconfig */,
 				4A1C607DE71684A752C9F698 /* Pods-HW_14.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -212,6 +214,7 @@
 				50AAEE29253BCD6C0091D20C /* ViewController.swift in Sources */,
 				50AAEE2F253BCD6C0091D20C /* HW_14.xcdatamodeld in Sources */,
 				50AAEE25253BCD6C0091D20C /* AppDelegate.swift in Sources */,
+				50AAEE46253BD26A0091D20C /* UsersData.swift in Sources */,
 				50AAEE27253BCD6C0091D20C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

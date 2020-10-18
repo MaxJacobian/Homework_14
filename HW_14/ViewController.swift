@@ -9,11 +9,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nameTextfield: UITextField!
+    
+    
+    @IBOutlet weak var surnameTextfield: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
+        
+        print("\(UsersData.shared.userName! ) \(UsersData.shared.userSurname!)")
+       
     }
-
+    
+    @IBAction func submitButton(_ sender: Any) {
+        UsersData.shared.userName = nameTextfield.text!
+        UsersData.shared.userSurname = surnameTextfield.text!
+    
+        
+    }
+    
 
 }
 
