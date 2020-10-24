@@ -43,4 +43,21 @@ class Persistance {
         }
         return storage
     }
+    func updateItem(targ: Target){
+       
+        try! relam.write(){
+            targ.isPacked = !targ.isPacked
+    }
+ }
+    func removeTarget(idRemove: Int){
+        let allTarget = relam.objects(Target.self)
+        for targ in  allTarget {
+            if targ.id == idRemove {
+                try! relam.write(){
+                    relam.delete(targ)
+                }
+        
+            }
+        }
+    }
 }

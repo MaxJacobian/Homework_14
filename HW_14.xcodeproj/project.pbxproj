@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E2006D9262D1A9BA9D5DCCA /* Pods_HW_14.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63D89C19743AC25827F3788 /* Pods_HW_14.framework */; };
 		504830C62541B34500EA5E8B /* ToDoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504830C52541B34500EA5E8B /* ToDoListTableViewCell.swift */; };
+		504830C92542567900EA5E8B /* CDToDoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504830C82542567900EA5E8B /* CDToDoListTableViewController.swift */; };
 		50AAEE25253BCD6C0091D20C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AAEE24253BCD6C0091D20C /* AppDelegate.swift */; };
 		50AAEE27253BCD6C0091D20C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AAEE26253BCD6C0091D20C /* SceneDelegate.swift */; };
 		50AAEE29253BCD6C0091D20C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AAEE28253BCD6C0091D20C /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		4A1C607DE71684A752C9F698 /* Pods-HW_14.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW_14.release.xcconfig"; path = "Target Support Files/Pods-HW_14/Pods-HW_14.release.xcconfig"; sourceTree = "<group>"; };
 		504830C52541B34500EA5E8B /* ToDoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListTableViewCell.swift; sourceTree = "<group>"; };
+		504830C82542567900EA5E8B /* CDToDoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDToDoListTableViewController.swift; sourceTree = "<group>"; };
 		50AAEE21253BCD6C0091D20C /* HW_14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW_14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AAEE24253BCD6C0091D20C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50AAEE26253BCD6C0091D20C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				50AAEE28253BCD6C0091D20C /* ViewController.swift */,
 				50AAEE45253BD26A0091D20C /* UsersData.swift */,
 				50AAEE2A253BCD6C0091D20C /* Main.storyboard */,
+				504830C82542567900EA5E8B /* CDToDoListTableViewController.swift */,
 				504830C52541B34500EA5E8B /* ToDoListTableViewCell.swift */,
 				50AAEE48253BE6B90091D20C /* ToDoListViewController.swift */,
 				50AAEE53253C332C0091D20C /* Persistance.swift */,
@@ -225,6 +228,7 @@
 				50AAEE2F253BCD6C0091D20C /* HW_14.xcdatamodeld in Sources */,
 				504830C62541B34500EA5E8B /* ToDoListTableViewCell.swift in Sources */,
 				50AAEE25253BCD6C0091D20C /* AppDelegate.swift in Sources */,
+				504830C92542567900EA5E8B /* CDToDoListTableViewController.swift in Sources */,
 				50AAEE46253BD26A0091D20C /* UsersData.swift in Sources */,
 				50AAEE49253BE6B90091D20C /* ToDoListViewController.swift in Sources */,
 				50AAEE27253BCD6C0091D20C /* SceneDelegate.swift in Sources */,
