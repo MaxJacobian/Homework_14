@@ -63,6 +63,7 @@ class CDToDoListTableViewController: UITableViewController {
         catch let error as NSError {
             print(error.localizedDescription)
         }
+        tableView.reloadData()
         
         
     }
@@ -71,7 +72,7 @@ class CDToDoListTableViewController: UITableViewController {
             for task in tasks {
                 if id == task.id {
                     context.delete(task)
-                    tableView.reloadData()
+                    
                 }
             }
         }
@@ -147,6 +148,8 @@ class CDToDoListTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath!, animated: false)
         let task = tasks[indexPath!.row]
         let id = task.id
-        deleteTask(id: id)
+       deleteTask(id: id)
+        tasks.remove(at: indexPath!.row)
+        tableView.reloadData()
    }
 }
