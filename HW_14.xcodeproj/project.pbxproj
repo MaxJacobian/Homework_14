@@ -22,6 +22,14 @@
 		50AAEE46253BD26A0091D20C /* UsersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AAEE45253BD26A0091D20C /* UsersData.swift */; };
 		50AAEE49253BE6B90091D20C /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AAEE48253BE6B90091D20C /* ToDoListViewController.swift */; };
 		50AAEE54253C332C0091D20C /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AAEE53253C332C0091D20C /* Persistance.swift */; };
+		50FD105625544EB300F29BE0 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FD105525544EB300F29BE0 /* Weather.swift */; };
+		50FD105925544EE300F29BE0 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FD105825544EE300F29BE0 /* WeatherViewController.swift */; };
+		50FD105C25544FFD00F29BE0 /* LoadedWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FD105B25544FFD00F29BE0 /* LoadedWeather.swift */; };
+		50FD105F255451A500F29BE0 /* PersistanceWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FD105E255451A500F29BE0 /* PersistanceWeather.swift */; };
+		50FD1062255453CF00F29BE0 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FD1061255453CF00F29BE0 /* Forecast.swift */; };
+		50FD1065255453E100F29BE0 /* ForecastLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FD1064255453E100F29BE0 /* ForecastLoader.swift */; };
+		50FD10692554542300F29BE0 /* PersistanceForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FD10682554542300F29BE0 /* PersistanceForecast.swift */; };
+		50FD107A2554590300F29BE0 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FD10792554590300F29BE0 /* ForecastTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +50,14 @@
 		50AAEE45253BD26A0091D20C /* UsersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersData.swift; sourceTree = "<group>"; };
 		50AAEE48253BE6B90091D20C /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		50AAEE53253C332C0091D20C /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		50FD105525544EB300F29BE0 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		50FD105825544EE300F29BE0 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		50FD105B25544FFD00F29BE0 /* LoadedWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedWeather.swift; sourceTree = "<group>"; };
+		50FD105E255451A500F29BE0 /* PersistanceWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceWeather.swift; sourceTree = "<group>"; };
+		50FD1061255453CF00F29BE0 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		50FD1064255453E100F29BE0 /* ForecastLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastLoader.swift; sourceTree = "<group>"; };
+		50FD10682554542300F29BE0 /* PersistanceForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceForecast.swift; sourceTree = "<group>"; };
+		50FD10792554590300F29BE0 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 		C63D89C19743AC25827F3788 /* Pods_HW_14.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HW_14.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E2AAC5E91D009B272CFACA /* Pods-HW_14.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW_14.debug.xcconfig"; path = "Target Support Files/Pods-HW_14/Pods-HW_14.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +95,7 @@
 		50AAEE23253BCD6C0091D20C /* HW_14 */ = {
 			isa = PBXGroup;
 			children = (
+				50FD105425544E9D00F29BE0 /* Weather */,
 				504D184B2546089300B18FC7 /* Tasks+CoreDataClass.swift */,
 				504D184C2546089300B18FC7 /* Tasks+CoreDataProperties.swift */,
 				50AAEE24253BCD6C0091D20C /* AppDelegate.swift */,
@@ -96,6 +113,53 @@
 				50AAEE2D253BCD6C0091D20C /* HW_14.xcdatamodeld */,
 			);
 			path = HW_14;
+			sourceTree = "<group>";
+		};
+		50FD105425544E9D00F29BE0 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				50FD106C255455AB00F29BE0 /* API */,
+				50FD106B2554550100F29BE0 /* DataBase */,
+				50FD105825544EE300F29BE0 /* WeatherViewController.swift */,
+				50FD10792554590300F29BE0 /* ForecastTableViewCell.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		50FD106B2554550100F29BE0 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				50FD105E255451A500F29BE0 /* PersistanceWeather.swift */,
+				50FD10682554542300F29BE0 /* PersistanceForecast.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		50FD106C255455AB00F29BE0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				50FD106F255455FC00F29BE0 /* API Weather */,
+				50FD106E255455E000F29BE0 /* API Forecast */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		50FD106E255455E000F29BE0 /* API Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				50FD1064255453E100F29BE0 /* ForecastLoader.swift */,
+				50FD1061255453CF00F29BE0 /* Forecast.swift */,
+			);
+			path = "API Forecast";
+			sourceTree = "<group>";
+		};
+		50FD106F255455FC00F29BE0 /* API Weather */ = {
+			isa = PBXGroup;
+			children = (
+				50FD105525544EB300F29BE0 /* Weather.swift */,
+				50FD105B25544FFD00F29BE0 /* LoadedWeather.swift */,
+			);
+			path = "API Weather";
 			sourceTree = "<group>";
 		};
 		5A2F15C0BA4E31A6F16D795F /* Frameworks */ = {
@@ -229,13 +293,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50FD1062255453CF00F29BE0 /* Forecast.swift in Sources */,
 				50AAEE54253C332C0091D20C /* Persistance.swift in Sources */,
 				504D184E2546089300B18FC7 /* Tasks+CoreDataProperties.swift in Sources */,
 				50AAEE29253BCD6C0091D20C /* ViewController.swift in Sources */,
+				50FD107A2554590300F29BE0 /* ForecastTableViewCell.swift in Sources */,
 				50AAEE2F253BCD6C0091D20C /* HW_14.xcdatamodeld in Sources */,
+				50FD105925544EE300F29BE0 /* WeatherViewController.swift in Sources */,
+				50FD105625544EB300F29BE0 /* Weather.swift in Sources */,
+				50FD105F255451A500F29BE0 /* PersistanceWeather.swift in Sources */,
 				504830C62541B34500EA5E8B /* ToDoListTableViewCell.swift in Sources */,
 				504D184D2546089300B18FC7 /* Tasks+CoreDataClass.swift in Sources */,
+				50FD1065255453E100F29BE0 /* ForecastLoader.swift in Sources */,
 				50AAEE25253BCD6C0091D20C /* AppDelegate.swift in Sources */,
+				50FD10692554542300F29BE0 /* PersistanceForecast.swift in Sources */,
+				50FD105C25544FFD00F29BE0 /* LoadedWeather.swift in Sources */,
 				504830C92542567900EA5E8B /* CDToDoListTableViewController.swift in Sources */,
 				50AAEE46253BD26A0091D20C /* UsersData.swift in Sources */,
 				50AAEE49253BE6B90091D20C /* ToDoListViewController.swift in Sources */,
