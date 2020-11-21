@@ -20,8 +20,22 @@ class LoaderForecast {
     func loaderForecast(){
         AF.request("http://api.openweathermap.org/data/2.5/forecast?q=Moscow&appid=90439e83f6127ff1e44db61fb94a53b3").responseData {
             response in
-            let forecastData: Forecast =  try! JSONDecoder().decode(Forecast.self, from: response.value!)
-            self.delegate?.forecastDelegate(forecast: forecastData)
+            switch response.result {
+            
+            case .success(let data):
+                
+                let forecastData: Forecast =  try! JSONDecoder().decode(Forecast.self, from: data)
+                self.delegate?.forecastDelegate(forecast: forecastData)
+                
+            case .failure(let error):
+                
+                //show error here
+                
+                print(error)
+
+                        }
+
+           
             
         }
     

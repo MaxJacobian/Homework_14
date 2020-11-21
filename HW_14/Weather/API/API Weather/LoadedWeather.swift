@@ -14,18 +14,24 @@ class LoaderWeather{
     var delegate: LoaderWeatherDelegate?
     
     func loaderWeather(){
-        AF.request("http://api.openweathermap.org/data/2.5/weather?q=Moscow&appid=90439e83f6127ff1e44db61fb94a53b3").responseData {
+        AF.request("http://api.openweathermap.org/data/2.5/weather?q=Moscow&appid=d2aab6019257b9173e86663513cec7a4").responseData {
             response in
-            let welcom: Welcome = try! JSONDecoder().decode(Welcome.self,from: response.value!)
+            switch response.result {
             
+            case .success(let data):
+                
+                let welcom: Welcome = try! JSONDecoder().decode(Welcome.self, from: data)
+                self.delegate?.loaderWeatherDelegate(welcom: welcom)
+            case .failure(let error):
+                print(error)
+            }
             
-            self.delegate?.loaderWeatherDelegate(welcom: welcom)
-            
-        }
-        
+
+      
         
     }
     
     
 }
 
+}
