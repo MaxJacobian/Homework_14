@@ -18,16 +18,7 @@ class WeatherViewController: UIViewController {
     var forecastMainFromServer: Forecast?
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
- 
-        tempFromDB = PersistanceWeather.share.loadedWeatherData()
-        forecastMain = PersistanceForecastWeather.share.loadForecastFromDB()
-       
-       
-
-
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
+          
         let loader = LoaderWeather()
         loader.delegate = self
         loader.loaderWeather()
@@ -39,6 +30,17 @@ class WeatherViewController: UIViewController {
         loaderForecast.delegate = self
         loaderForecast.loaderForecast()
         
+        tempFromDB = PersistanceWeather.share.loadedWeatherData()
+        forecastMain = PersistanceForecastWeather.share.loadForecastFromDB()
+       
+       
+
+
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+      
+     
         
       
     tempNow.text = "\(round(tempFromDB.isEmpty ? temp : tempFromDB[0].weatherCash - 273.5) <= 0.3 ? 0 : round(tempFromDB[0].weatherCash - 273.5))°C"
@@ -51,6 +53,9 @@ class WeatherViewController: UIViewController {
 extension WeatherViewController: LoaderForecastDelegate {
     func forecastDelegate(forecast: Forecast) {
         self.forecastMainFromServer = forecast
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
         for b in forecast.list {
             let f = ForecastWeather()
             f.date = b.dtTxt
@@ -62,15 +67,21 @@ extension WeatherViewController: LoaderForecastDelegate {
 }
 extension WeatherViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return forecastMain.count
+        let countOfSection = forecastMain.isEmpty ? forecastMainFromServer?.list.count : forecastMain.count
+        return countOfSection ?? 1
 }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Forecast") as! ForecastTableViewCell
-        cell.dateLabel.text = "\( forecastMain.isEmpty ? String(describing:forecastMainFromServer?.list[indexPath.row].dtTxt) : forecastMain[indexPath.row].date)"
-        cell.tempLabel.text = "\(round( forecastMain.isEmpty ? forecastMainFromServer!.list[indexPath.row].main.temp - 273.15:  forecastMain[indexPath.row].temperature  - 273.15))°C"
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        
+        switch forecastMain.isEmpty {
+        case false:
+            cell.dateLabel.text = "\(forecastMain[indexPath.row].date)"
+            cell.tempLabel.text = "\(round(forecastMain[indexPath.row].temperature - 273.15))°C"
+        default:
+            cell.dateLabel.text = "\(forecastMainFromServer?.list[indexPath.row].dtTxt ?? "")"
+            let temp = forecastMainFromServer?.list[indexPath.row].main.temp ?? 1
+            cell.tempLabel.text = "\(round(temp - 273.15))°C"
         }
 
         
