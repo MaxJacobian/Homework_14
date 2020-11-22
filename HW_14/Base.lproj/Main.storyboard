@@ -307,7 +307,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="9Wz-JG-W1W" id="vAL-Rz-bEg"/>
+                                    <outlet property="dataSource" destination="9Wz-JG-W1W" id="i66-t3-hc8"/>
                                     <outlet property="delegate" destination="9Wz-JG-W1W" id="oQo-rC-dIB"/>
                                 </connections>
                             </tableView>
@@ -345,6 +345,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Weather" id="Yrf-Td-sk7"/>
                     <connections>
+                        <outlet property="tableView" destination="O7W-hh-N0D" id="ox0-ea-jqZ"/>
                         <outlet property="tempNow" destination="u8R-rK-HmU" id="LMw-hg-GAf"/>
                     </connections>
                 </viewController>
